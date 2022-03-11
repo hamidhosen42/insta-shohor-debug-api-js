@@ -62,7 +62,7 @@
         </div>
     </main>
 
-    <section class="container">
+    <section id="question" class="container">
         <h2 class="text-center mb-3">The answer to the Question</h2>
 
         <div class="col">
@@ -70,7 +70,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title text-primary">How Does Javasctipt Work?</h5>
-                        <p class="card-text" style="text-align: justify;">জাভাস্ক্রিপ্ট একটি হাই লেভেল প্রোগ্রামিং ল্যাংঙ্গুয়েজ।আর এটাকে ইন্টারমেডিয়েট ল্যাঙ্গুয়েজ ধরে এর উপর তৈরি হয়েছে বেশ কিছু যেমন CoffeeScript, TypeScript এর মতো সাব ল্যাঙ্গুয়েজ,এ ছাড়াও Apache CouchDB, MongoDB ইত্যাদি ডাটাবেইজ গুলো তাদের স্ক্রিপ্টিং ল্যাঙ্গুয়েজ এবং কুয়েরী ল্যাঙ্গুয়েজ হিসেবেজাভাস্ক্রিপ্ট ব্যবহার করে।সাধারণত জাভাস্ক্রিপ্ট দুইভাবে ওয়েবে ব্যবহার করা হই।ক্লাইন্ট সাইড এবং সার্ভার সাইড।ক্লাইন্ট সাইড সাধারণত শুধু ব্রাউজারে চলে এবং সার্ভার সাইড সার্ভারে চলে,সাধারনত সার্ভার থেকেই কোড প্রসেস হয়।আজকাল, বেশিরভাগ আধুনিক ওয়েব ব্রাউজার জাভাস্ক্রিপ্ট সমর্থন করে এবং তাদের জাভাস্ক্রিপ্ট ইঞ্জিন রয়েছে। উদাহরণস্বরূপ,Google Chrome এর নিজস্ব জাভাস্ক্রিপ্ট ইঞ্জিন রয়েছে যার নাম V8।</p>
+                        <p class="card-text" style="text-align: justify;">জাভাস্ক্রিপ্ট একটি হাই লেভেল প্রোগ্রামিং ল্যাংঙ্গুয়েজ।আর এটাকে ইন্টারমেডিয়েট ল্যাঙ্গুয়েজ ও বলে। এর উপর তৈরি হয়েছে বেশ কিছু যেমন CoffeeScript, TypeScript এর মতো সাব ল্যাঙ্গুয়েজ,এ ছাড়াও Apache CouchDB, MongoDB ইত্যাদি ডাটাবেইজ গুলো তাদের স্ক্রিপ্টিং ল্যাঙ্গুয়েজ এবং কুয়েরী ল্যাঙ্গুয়েজ হিসেবেজাভাস্ক্রিপ্ট ব্যবহার করে।সাধারণত জাভাস্ক্রিপ্ট দুইভাবে ওয়েবে ব্যবহার করা হই।ক্লাইন্ট সাইড এবং সার্ভার সাইড।ক্লাইন্ট সাইড সাধারণত শুধু ব্রাউজারে চলে এবং সার্ভার সাইড সার্ভারে চলে,সাধারনত সার্ভার থেকেই কোড প্রসেস হয়।আজকাল, বেশিরভাগ আধুনিক ওয়েব ব্রাউজার জাভাস্ক্রিপ্ট সমর্থন করে এবং তাদের জাভাস্ক্রিপ্ট ইঞ্জিন রয়েছে। উদাহরণস্বরূপ,Google Chrome এর নিজস্ব জাভাস্ক্রিপ্ট ইঞ্জিন রয়েছে যার নাম V8। এছাড়াও জাভাস্ত্রিপ্ট এর সাহায্যে একটা HTML পেজে নানান ধরনের ইফেক্ট বা আকর্ষণীয় জিনিস তৈরী করা যায় এছাড়া ফর্ম ভেলিডেশন এবং
+                        এজাক্সের কাজও করা যায়।</p>
                     </div>
                 </div>
             </div>
@@ -78,18 +79,24 @@
                 <div class="card">
                     <div class="card-body mt-4">
                         <h5 class="card-title text-primary">LocalStorage vs sessionStorage</h5>
-                        <p class="card-text" style="text-align: justify;"><span class="text-success fw-bold">LocalStorage:</span>লোকাল স্টোরেজ এর ডাটা স্হায়ী থাকে।ব্রাউজার বন্ধ হয়ে গেলে বা বন্ধ হয়ে গেলে ব্রাউজারে আবার পাওয়া যাবে।লোকাল স্টোরেজ এর চারটা মেথড setItem(),getItem(),removeItem(),clear()।localStorage.setItem(key, value) ব্যবহার করে লোকাল স্টোরেজ এ মান সেট করা হই এবং localStorage.getItem() ব্যবহার করে লোকাল স্টোরেজ থেকে নির্দিষ্ট মান রিটার্ন করা হই।
+                        <p class="card-text" style="text-align: justify;"><span class="text-success fw-bold">LocalStorage:</span>লোকাল স্টোরেজ এর ডাটা স্হায়ী থাকে।ব্রাউজার বন্ধ হয়ে গেলে বা বন্ধ হয়ে গেলে ব্রাউজারে আবার পাওয়া যাবে।লোকাল স্টোরেজ এর চারটা মেথড setItem(),getItem(),removeItem(),clear()।localStorage.setItem(key, value) ব্যবহার করে লোকাল স্টোরেজ এ মান সেট করা হই এবং localStorage.getItem() ব্যবহার করে লোকাল স্টোরেজ থেকে নির্দিষ্ট মান রিটার্ন করা হই।এছাড়াও লোকাল স্টোরেজ এর অবজেক্ট নিয়ে কাজ করতে হলে সেটাকে প্রথমে JSON.parse() করতে হবে, লোকাল স্টোরেজ এ কোন অবজেক্ট সেট করার আগে JSON.stringify() করতে হবে।
                         </p>
 
-                        <p class="card-text mt-4" style="text-align: justify;"><span class="text-success fw-bold">SessionStorage:</span>সেশন স্টোরেজ এর ডাটা সাময়িকভাবে থাকে।ব্রাউজার বন্ধ হয়ে গেলে বা বন্ধ হয়ে গেলে ব্রাউজারে আবার পাওয়া যাবে না।সেশন স্টোরেজ এর চারটা মেথড setItem(),getItem(),removeItem(),clear()।sessionStorage.setItem(key, value) ব্যবহার করে সেশন স্টোরেজ এ মান সেট করা হই এবং sessionStorage.getItem() ব্যবহার করে সেশন স্টোরেজ থেকে নির্দিষ্ট মান রিটার্ন করা হই।</p>
+                        <p class="card-text mt-4" style="text-align: justify;"><span class="text-success fw-bold">SessionStorage:</span>সেশন স্টোরেজ এর ডাটা সাময়িকভাবে থাকে।ব্রাউজার বন্ধ হয়ে গেলে বা বন্ধ হয়ে গেলে ব্রাউজারে আবার পাওয়া যাবে না।সেশন স্টোরেজ এর চারটা মেথড setItem(),getItem(),removeItem(),clear()।sessionStorage.setItem(key, value) ব্যবহার করে সেশন স্টোরেজ এ মান সেট করা হই এবং sessionStorage.getItem() ব্যবহার করে সেশন স্টোরেজ থেকে নির্দিষ্ট মান রিটার্ন করা হই। এছাড়াও সেশন স্টোরেজএর অবজেক্ট নিয়ে কাজ করতে হলে সেটাকে প্রথমে JSON.parse() করতে হবে, সেশন স্টোরেজ এ কোন অবজেক্ট সেট করার
+                        আগে JSON.stringify() করতে হবে।</p>
                     </div>
                 </div>
             </div>
             <div class="col mt-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <h5 class="card-title text-primary">What does javascript event loop do?</h5>
+                        <p class="card-text" style="text-align: justify;">জাভাস্ক্রিপ্ট এর ইভেন্ট লুপ হচ্ছে Callback Queue থেকে Call stack এ নিয়ে যাওয়া। ধরুন আমরা তিনটি Function ক্রিয়েট করলাম।
+                        তারপর ঐ তিনটি ফাংশনকে আমরা আরেকটি ফাংশন থেকে কল করবো। সেই ফাংশনে যদি আমরা দুইটা ফাংশনের পর ‍setTimeout সেট করে অন্য
+                        আরেকটা ফাংশন ওখানে রাখি তারপর আরেকটা ফাংশকে কল করি তাহলে কি হয়? আমরা এখানে দেখি যে Javascript প্রথমে মেইন ফাংশনকে কল করে
+                        যে ফাংশনটাতে আমরা চারটা ফাংশন কল করছি সেটাকে কল করবে। ওখান থেকে প্রথম দুইটা কল করার পর ‍setTimeout এ যেটুকু সময় টাইম আউট
+                        করা হয়েছে সেটা বাদ দিয়ে পরের ফাংশনে চলে যাবে। সেটা execute করে দিবে। এখন ইভেন্ট লুপ কাজ করবে যে ফাংশনটাকে টাইমআউট করা
+                        হয়েছে সেটাকে callback queue থেকে call stack এ নিয়ে যাবে। তারপর সেই ফাংশনের কাজ শেষ হলে আমাদের পুরা কোড রান হওয়া শেষ হবে।</p>
                     </div>
                 </div>
             </div>
