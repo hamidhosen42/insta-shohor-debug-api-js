@@ -4,11 +4,13 @@ const likedPostsId = [];
 const reportedPostsId = [];
 
 const getLikedPosts = () => {
+  console.log(likedPostsId);
   return posts.filter((post) => likedPostsId.includes(post.id));
 };
 
 const getReportedPosts = () => {
-  return posts.find((post) => reportedPostsId.includes(post.id));
+  console.log(posts.filter((post) => reportedPostsId.includes(post.id)));
+  return posts.filter((post) => reportedPostsId.includes(post.id));
 };
 
 const isLiked = (id) => {
@@ -21,7 +23,6 @@ const addToLiked = (id) => {
 };
 
 const reportPost = (id) => {
-
   reportedPostsId.push(id);
   const remainingPosts = posts.filter(
     (post) => !reportedPostsId.includes(post.id)
@@ -47,13 +48,13 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
 
+
     displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
     
-
     displayReportedPosts();
   }
 };
@@ -95,7 +96,6 @@ const createPost = (post) => {
               <div class="post__footer">
                 <div class="post__buttons">
 
-                // ............................--------------------
                   <button class="post__button" onclick="addToLiked(${post.id})">
                   <i class="fa-solid fa-heart ${
                     isLiked(post.id) && "text-danger"
@@ -108,7 +108,6 @@ const createPost = (post) => {
                   
 
                   <div class="post__indicators"></div>
-// ---------------------------------------------------------
                   <button class="post__button post__button--align-right" onclick="reportPost(${
                     post.id
                   })">
@@ -171,11 +170,11 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
-
   reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
+  reportedPostsId.length=0;
 };
 
 const loadPosts = async () => {
