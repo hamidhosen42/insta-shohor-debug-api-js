@@ -8,7 +8,7 @@ const getLikedPosts = () => {
 };
 
 const getReportedPosts = () => {
-  return posts.filter((post) => reportedPostsId.includes(post.id));
+  return posts.find((post) => reportedPostsId.includes(post.id));
 };
 
 const isLiked = (id) => {
@@ -21,10 +21,12 @@ const addToLiked = (id) => {
 };
 
 const reportPost = (id) => {
+
   reportedPostsId.push(id);
   const remainingPosts = posts.filter(
     (post) => !reportedPostsId.includes(post.id)
   );
+
   showPosts(remainingPosts);
 };
 
@@ -39,6 +41,7 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
+
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
@@ -49,6 +52,7 @@ const switchTab = (id) => {
     document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
+    
 
     displayReportedPosts();
   }
@@ -90,6 +94,8 @@ const createPost = (post) => {
 
               <div class="post__footer">
                 <div class="post__buttons">
+
+                // ............................--------------------
                   <button class="post__button" onclick="addToLiked(${post.id})">
                   <i class="fa-solid fa-heart ${
                     isLiked(post.id) && "text-danger"
@@ -102,7 +108,7 @@ const createPost = (post) => {
                   
 
                   <div class="post__indicators"></div>
-
+// ---------------------------------------------------------
                   <button class="post__button post__button--align-right" onclick="reportPost(${
                     post.id
                   })">
@@ -143,6 +149,7 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
+
   const productsContainer = document.getElementById("posts");
   productsContainer.innerHTML = "";
 
@@ -158,11 +165,14 @@ const displayLikedPosts = () => {
     const div = createPost(post);
     document.getElementById("liked").appendChild(div);
   });
+  likedPostsId.length=0;
 };
+
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
-  posts.forEach((post) => {
+
+  reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
